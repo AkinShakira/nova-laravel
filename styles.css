@@ -32,7 +32,11 @@
   opacity: 0.5;
 }
 
-.sect1  {
+.sect {
+  padding: 2.5rem 0;
+}
+
+.sect1, .sect5  {
   padding: 2.5rem 1.5rem;
 }
 
@@ -117,13 +121,8 @@
 
 .sect2  {
   background-color: #26425f;
-  padding: 2.5rem 0;
 }
 
-.sect-con {
-  width: 100%;
-  margin: 0 auto;
-}
 .image-container {
   padding: 0 1.5rem;
   margin-bottom: 1.5rem;
@@ -158,7 +157,7 @@
   flex-direction: row;
   align-items: flex-start;
 }
-.card:last-child  {
+.card:last-of-type  {
   margin-bottom: 0;
 }
 
@@ -177,7 +176,6 @@
   color: #aaf1ff;
 }
 .sect3  {
-  padding: 2.5rem 0;
   background-color: #fff;
 }
 .sect3_card-container   {
@@ -195,4 +193,82 @@
   line-height: 1.7;
   font-size: 0.875rem;
   color: #4c5c69;
+}
+.sect4  {
+  padding: 2.5rem 1.5rem;
+  background-image: linear-gradient(135deg,#2891c4,#125b93);
+}
+.creator-img  {
+  display: block;
+  width: 6rem;
+  height: 6rem;
+  margin: 0 auto 2.5rem;
+  border: 4px solid #fff;
+  border-radius: 50%;
+  /* max-width: 100%; */
+}
+.sect4_body {
+  line-height: 1.25;
+  text-align: center;
+  color: #fff;
+}
+.sect4_content  {
+  margin: 0 0 1.5rem;
+  font-size: 1.25rem;
+}
+[class^=creator-] {
+  letter-spacing: 0.05em;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+.creator-name {
+  margin: 0 0 0.5rem;
+}
+.creator-label  {
+  color: hsla(0,0%,100%,.7);
+}
+.tablet-container {
+  width: 100%;
+  margin: 0 auto 2.5rem;
+}
+.tablet {
+  width: 100%;
+  border: 0 solid;
+  border-radius: 0.5rem;
+  background-color: #fff;
+  box-shadow: 0 15px 30px 0 rgba(0,0,0,.11),0 5px 15px 0 rgba(0,0,0,.08);
+}
+.tablet:first-of-type {
+  margin: 0 0 2.5rem;
+}
+.tablet-body  {
+  padding: 2rem 1.5rem 2.5rem ;
+}
+.tablet-title {
+  margin: 0 0 0.75rem;
+  font-size: 1.25rem;
+  letter-spacing: 0.05rem;
+  font-weight: bold;
+  color: #4a90e2;
+}
+.tablet-price {
+  margin: 0 0 1rem;
+  /* vertical-align: text-top; */
+}
+.tablet-price_currency  {
+  font-size: 1.875rem;
+  font-weight: 300;
+  color: #8a97a2;
+  line-height: 0;
+}
+/* check on the styling for currency */
+.tablet-price_number  {
+  font-size: 3.75rem;
+  font-weight: 300;
+  color: #202c3a;
+}
+.tablet-price_item  {
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: #202c3a;
 }
