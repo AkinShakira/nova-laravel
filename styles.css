@@ -1,5 +1,8 @@
 /* max width of 480 */
-
+.body {
+  padding: 0 0 5rem;
+  position: relative;
+}
 .header  {
   width: 100%;
   padding: 1.5rem;
@@ -81,7 +84,7 @@
   height: 3rem;
   padding: 0 1.5rem;
   font-weight: 700;
-  letter-spacing: 0.05rem;
+  letter-spacing: 0.05em;
   color: #fff;
   background-color: #4099de;
   border: 0px solid #4099de;
@@ -245,23 +248,26 @@
   padding: 2rem 1.5rem 2.5rem ;
 }
 .tablet-title {
-  margin: 0 0 0.75rem;
+  margin: 0 0 0.25rem;
   font-size: 1.25rem;
-  letter-spacing: 0.05rem;
+  letter-spacing: 0.05em;
   font-weight: bold;
   color: #4a90e2;
 }
 .tablet-price {
+  /* height: 78px; */
   margin: 0 0 1rem;
-  /* vertical-align: text-top; */
+  vertical-align: text-top;
 }
 .tablet-price_currency  {
   font-size: 1.875rem;
   font-weight: 300;
   color: #8a97a2;
   line-height: 0;
+  position: relative;
+  top: -1rem;
 }
-/* check on the styling for currency */
+
 .tablet-price_number  {
   font-size: 3.75rem;
   font-weight: 300;
@@ -271,4 +277,87 @@
   font-size: 1.25rem;
   font-weight: 300;
   color: #202c3a;
+}
+.tablet-content-container {
+  line-height: 1.5;
+  color: #26425f;
+}
+.tablet-content {
+  padding: 0.5rem 0;
+  display: flex;
+}
+
+.tablet-content_icon  {
+  margin-right: 0.75rem;
+  fill: #4099de;
+}
+.tablet-note {
+  margin-top: 3rem;  
+  font-size: 0.875rem;
+  line-height: 1.5;
+  /* vertical-align: text-top; */
+  color: #56677b;
+}
+.tablet-link, .tablet-link:visited  {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 4.5rem;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+  color: #4099de;
+  background-color: #f7f9fb;
+}
+.tablet-link:hover  {
+  background-color: #eef1f4;
+}
+.tablet-link span {
+  margin-left: 0.75rem;
+  font-weight: 700;
+}
+.footer {
+  margin: 1.5rem 0 0;
+}
+.footer_note, .footer_link-container {
+  padding: 0 3rem;
+  margin-bottom: 0.25rem;
+  text-align: center;
+  line-height: 1.5;
+  font-size: 0.875rem;
+  color:#56677b;
+}
+.footer_link  {
+  padding: 0.75rem 0 0;
+  color: #4099de;
+}
+.divider  {
+  padding: 0 0.25rem;
+  color: #8a97a2;
+}
+/* not done with this */
+.message-button-container {
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 2rem;
+  z-index: 10;
+  background-color: transparent;
+}
+.sec-con  {
+  width: 100%;
+  position: relative;
+  background-color: transparent;
+}
+.message-button {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  right: 2rem;
+  bottom: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  background-color: rgb(57, 73, 86);
+  color: #fff;
 }
