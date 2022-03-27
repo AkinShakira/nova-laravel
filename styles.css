@@ -244,8 +244,11 @@
 .tablet:first-of-type {
   margin: 0 0 2.5rem;
 }
-.tablet-body  {
+.tablet-body:first-of-type  {
   padding: 2rem 1.5rem 2.5rem ;
+}
+.tablet-body:last-of-type  {
+  padding: 2rem 2.5rem 2.5rem;
 }
 .tablet-title {
   margin: 0 0 0.25rem;
@@ -295,7 +298,6 @@
   margin-top: 3rem;  
   font-size: 0.875rem;
   line-height: 1.5;
-  /* vertical-align: text-top; */
   color: #56677b;
 }
 .tablet-link, .tablet-link:visited  {
@@ -338,9 +340,10 @@
 .message-button-container {
   position: -webkit-sticky;
   position: sticky;
-  bottom: 2rem;
-  z-index: 10;
+  bottom: 0;
+  z-index: 1000;
   background-color: transparent;
+  -webkit-font-smoothing: antialiased;
 }
 .sec-con  {
   width: 100%;
@@ -352,12 +355,24 @@
   height: 60px;
   position: absolute;
   right: 2rem;
-  bottom: 0px;
+  bottom: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid transparent;
+  border: 2px solid rgb(49, 65, 78);
+  ;
   border-radius: 50%;
-  background-color: rgb(57, 73, 86);
-  color: #fff;
+  background-color: rgb(49, 65, 78);
+}
+.icons-container  {
+  display: flex;
+}
+.cancel-icon  {
+  display: none;
+}
+.message-button:active .message-icon  {
+  display: none;
+}
+.message-button:active .cancel-icon  {
+  display: inline;
 }
