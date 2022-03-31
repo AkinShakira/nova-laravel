@@ -55,7 +55,7 @@
   width: 100%;
 }
 
-.sect1-desc {
+.sect1-body {
   padding: 1.5rem 0 0;
 }
 
@@ -218,6 +218,7 @@
   border: 4px solid #fff;
   border-radius: 50%;
 }
+/* added the maxwidth and height auto to make the image responsive and able to scale down but not scale up */
 .sect4_body {
   line-height: 1.25;
   text-align: center;
@@ -238,6 +239,9 @@
 .creator-label  {
   color: hsla(0,0%,100%,.7);
 }
+.creator-divider  {
+  display: none;
+}
 .tablet-container {
   width: 100%;
   margin: 0 auto 2.5rem;
@@ -249,6 +253,8 @@
   border-radius: 0.5rem;
   background-color: #fff;
   box-shadow: 0 15px 30px 0 rgba(0,0,0,.11),0 5px 15px 0 rgba(0,0,0,.08);
+  overflow: hidden;
+  /* this is needed for the border radii to apply to the border bottom left and right on the mobile screen */
 }
 .tablet-1 {
   margin: 0 0 2.5rem;
@@ -268,7 +274,6 @@
 }
 .tablet-price {
   margin: 0 0 1rem;
-  /* vertical-align: text-top; */
 }
 .tablet-price_currency  {
   font-size: 1.875rem;
@@ -293,7 +298,6 @@
   color: #26425f;
 }
 .tablet-content {
-  height: 45px;
   padding: 0.5rem 0;
   display: flex;
   align-items: center;
@@ -313,9 +317,6 @@
   align-items: center;
   justify-content: center;
   height: 4.5rem;
-  border: 0 solid;
-  border-bottom-right-radius: 0.5rem;
-  border-bottom-left-radius: 0.5rem;
   letter-spacing: 0.05em;
   font-weight: 700;
   color: #4099de;
@@ -343,7 +344,7 @@
   padding: 0.75rem 0 0;
   color: #4099de;
 }
-.divider  {
+.footer-divider  {
   padding: 0 0.25rem;
   color: #8a97a2;
 }
@@ -354,7 +355,6 @@
   bottom: 0;
   z-index: 1000;
   background-color: transparent;
-  -webkit-font-smoothing: antialiased;
 }
 .sec-con  {
   width: 100%;
@@ -378,6 +378,7 @@
 .icons-container  {
   display: flex;
 }
+
 .cancel-icon  {
   display: none;
 }
@@ -385,8 +386,22 @@
   display: none;
 }
 .message-button:active .cancel-icon  {
-  display: inline;
+  display: inline-block;
 }
+/* .message-button:active  .message-icon {
+  animation: icon 2s ease-out 0;
+}
+@keyframes icon   {
+  0%  {display: inline;}
+  100%  {display: none;}
+}
+.message-button:active  .cancel-icon {
+  animation: icon 2s ease-out 0;
+}
+@keyframes icon   {
+  0%  {display: none;}
+  100%  {display: inline;}
+} */
 
 @media screen and (min-width:768px) {
 
@@ -414,9 +429,6 @@
     display: inline-flex;
     flex-direction: row;
     align-items: center;
-    /* justify-content: space-between; 
-    width: 447.4px; */
-    /* margin-left: auto; */
   }
  
   .nav_item {
@@ -446,7 +458,7 @@
     width: 100%;
   }
   
-  .sect1-desc  {
+  .sect1-body  {
     width: 50%;
     margin-right: 2.5rem;
     padding: 0;
@@ -484,9 +496,11 @@
     padding: 2.5rem 0 5rem;
   }
   .sect2-container  {
+    width: 100%;
     max-width: 960px;
     margin: 0 auto;
   }
+  /* adding max-width the sect2 class cuts the background colour. so i created another container (sect2-container) inside to apply the maxwidth to */
   .image-container {
     padding: 0;
     margin: -175px 0 5rem;
@@ -508,7 +522,7 @@
     flex-direction: column;
   }
    .sect2_card-icon  {
-     margin-right: 0;
+    margin-right: 0;
     margin-bottom: 1.5rem;
   }
   .sect3  {
@@ -520,6 +534,7 @@
     margin: 0 auto;
     padding: 0;
   }
+  /* adding max-width the sect3 class cuts the background colour. so i created another container (sect3-container) inside to apply the maxwidth to */
   .sect3_card-container {
     width: auto;
     margin: 0 -1rem;
@@ -532,12 +547,72 @@
     width: 50%;
     margin: 0 0 5rem;
   }
-  
+  .sect4  {
+    padding: 5rem 1.5rem 190px;
+  }
+  .sect4-container  {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
 
-  
+  }
+  /* adding max-width the sect4 class cuts the background colour. so i created another container (sect4-container) inside to apply the maxwidth to */
+  .creator-img  {
+    margin: -135px auto 3rem;
+  }
+  .sect4_body {
+    max-width: 48.75rem;
+    text-align: center;
+    margin: 0 auto 3rem;
+  }
+  .sect4_content  {
+    font-size: 1.875rem;
+  }
+  .creator-container  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .creator-name, .creator-label {
+    display: inline-block;
+    margin: 0;
+    font-size: 1rem;
+  }
+  .creator-divider  {
+    display: inline-block;
+    margin: 0 1.5rem;
+    font-weight: 700;
+  }
+  .sect5  {
+    margin-bottom: 2.5rem;
+    padding: 0;
+  }
 
-
+  .tablet-container {
+    max-width: 960px;
+    margin: -190px auto 0;
+    display: flex;
+    justify-content: center;
+  }
+   /* adding max-width the sect5 class cuts the background colour. so i added it to the tablet-container instead */
+  .tablet {
+    width: 22.5rem;
+  }
+  .tablet-1 {
+    margin-right: 2.5rem;
+  }
+  .tablet-1-body, .tablet-2-body  {
+    padding: 2rem 2.5rem 2.5rem ;
+  }
+  .footer_note, .footer_link-container {
+    padding: 0;
   }
 
 
-    /* to fix: svg dancingm sticky icon button */
+}
+
+
+
+ 
+
+    /* to fix: svg dancing and sticky icon button */
