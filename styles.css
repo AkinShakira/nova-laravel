@@ -558,7 +558,7 @@
   }
   /* adding max-width the sect4 class cuts the background colour. so i created another container (sect4-container) inside to apply the maxwidth to */
   .creator-img  {
-    margin: -135px auto 3rem;
+    margin: -135px auto 2.5rem;
   }
   .sect4_body {
     max-width: 48.75rem;
