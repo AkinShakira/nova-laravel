@@ -137,7 +137,6 @@
 .image-container {
   padding: 0 1.5rem;
   margin-bottom: 1.5rem;
-  /* box-shadow: 0 15px 30px 0 rgba(0,0,0,.11),0 5px 15px 0 rgba(0,0,0,.08); */
 }
 
 .image  {
@@ -145,6 +144,7 @@
   height: auto;
   border: 0 solid;
   border-radius: 0.5rem;
+  box-shadow: 0 15px 30px 0 rgba(0,0,0,.11),0 5px 15px 0 rgba(0,0,0,.08);
 }
 .sect2_title  {
   margin-bottom: 2.5rem;
@@ -254,7 +254,7 @@
   background-color: #fff;
   box-shadow: 0 15px 30px 0 rgba(0,0,0,.11),0 5px 15px 0 rgba(0,0,0,.08);
   overflow: hidden;
-  /* this is needed for the border radii to apply to the border bottom left and right on the mobile screen */
+  /* this is needed for the border radii to apply to the border bottom left and right. else the link will overflow it */
 }
 .tablet-1 {
   margin: 0 0 2.5rem;
@@ -348,7 +348,6 @@
   padding: 0 0.25rem;
   color: #8a97a2;
 }
-/* not done with this */
 .message-button-container {
   position: -webkit-sticky;
   position: sticky;
@@ -365,15 +364,14 @@
   width: 60px;
   height: 60px;
   position: absolute;
-  right: 2rem;
-  bottom: 2rem;
+  right: 2.25rem;
+  bottom: 2.25rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid rgb(49, 65, 78);
-  ;
+  border: 2px solid rgb(57, 73, 86);
   border-radius: 50%;
-  background-color: rgb(49, 65, 78);
+  background-color: rgb(57, 73, 86);
 }
 .icons-container  {
   display: flex;
@@ -388,20 +386,7 @@
 .message-button:active .cancel-icon  {
   display: inline-block;
 }
-/* .message-button:active  .message-icon {
-  animation: icon 2s ease-out 0;
-}
-@keyframes icon   {
-  0%  {display: inline;}
-  100%  {display: none;}
-}
-.message-button:active  .cancel-icon {
-  animation: icon 2s ease-out 0;
-}
-@keyframes icon   {
-  0%  {display: none;}
-  100%  {display: inline;}
-} */
+
 
 @media screen and (min-width:768px) {
 
@@ -504,7 +489,6 @@
   .image-container {
     padding: 0;
     margin: -175px 0 5rem;
-    box-shadow: 0 15px 30px 0 rgba(0,0,0,.11),0 5px 15px 0 rgba(0,0,0,.08);
   }
   .sect2_title  {
     margin-bottom: 2.5rem;
@@ -584,7 +568,7 @@
     font-weight: 700;
   }
   .sect5  {
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.5rem;
     padding: 0;
   }
 
@@ -597,6 +581,10 @@
    /* adding max-width the sect5 class cuts the background colour. so i added it to the tablet-container instead */
   .tablet {
     width: 22.5rem;
+    height: 29.625rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
   .tablet-1 {
     margin-right: 2.5rem;
@@ -604,11 +592,13 @@
   .tablet-1-body, .tablet-2-body  {
     padding: 2rem 2.5rem 2.5rem ;
   }
+
   .footer_note, .footer_link-container {
     padding: 0;
   }
-
-
+  .footer_link-container  {
+    margin-bottom: 0;
+  }
 }
 
 
