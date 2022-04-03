@@ -32,4 +32,5 @@ a:focus, button:focus	{
 
 a, button	{
 	-webkit-tap-highlight-color: transparent;	
+	tap-highlight-color:transparent;
 }
