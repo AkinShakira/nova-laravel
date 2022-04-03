@@ -24,13 +24,10 @@ ul	{
 a, button	{
 	text-decoration: none;
 	cursor: pointer;
+	-webkit-tap-highlight-color: transparent;	
+	tap-highlight-color:transparent;
 }
 
 a:focus, button:focus	{
 	outline: 0;
-}
-
-a, button	{
-	-webkit-tap-highlight-color: transparent;	
-	tap-highlight-color:transparent;
 }
