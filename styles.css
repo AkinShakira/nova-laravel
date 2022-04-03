@@ -33,7 +33,7 @@
   color: #26425f;
 }
 
-.header-link:active, .header-link:visited  {
+.header-link:hover, .header-link:active  {
   color: #26425f;
   opacity: 0.5;
 }
@@ -344,6 +344,9 @@
   padding: 0.75rem 0 0;
   color: #4099de;
 }
+.footer_link:hover  {
+  opacity: 0.5;
+}
 .footer-divider  {
   padding: 0 0.25rem;
   color: #8a97a2;
@@ -353,11 +356,6 @@
   position: sticky;
   bottom: 0;
   z-index: 1000;
-  background-color: transparent;
-}
-.sec-con  {
-  width: 100%;
-  position: relative;
   background-color: transparent;
 }
 .message-button {
@@ -372,6 +370,9 @@
   border: 2px solid rgb(57, 73, 86);
   border-radius: 50%;
   background-color: rgb(57, 73, 86);
+}
+.message-button:hover {
+  background-color: rgb(49, 65, 78);
 }
 .icons-container  {
   display: flex;
@@ -390,11 +391,6 @@
 
 @media screen and (min-width:768px) {
 
-  /* .body {
-    max-width: 960px;
-    margin: 0 auto;
-  } 
-   */
   .header  {
     width: 100%;
     max-width: 960px;
@@ -599,10 +595,12 @@
   .footer_link-container  {
     margin-bottom: 0;
   }
+  .message-button {
+    right: 1.1rem;
+    bottom: 0.55rem;
+  }
 }
 
 
 
  
-
-    /* to fix: svg dancing and sticky icon button */
